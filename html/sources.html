@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hugo's WebSite</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <a>
+            <p class="titre">Durand Hugo's</p>
+            <p class="sous-titre">WebSite</p>
+        </a>
+        <h2 class="active-page">Sources</h2>
+        <ul class="menu">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="histoire.html">Histoire</a></li>
+            <li><a href="favoris.html">Travaux</a></li>
+            <li><a href="sources.html" class="active">Sources</a></li>
+            <li><a href="https://www.ecoledirecte.com/login?cameFrom=%2FAccueil">EcoleDirecte</a></li>
+            <li><a href="https://www.w3schools.com">W3Schools</a></li>
+        </ul>
+        <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <script>
+            const hamburger = document.querySelector('.hamburger');
+            const mobile_menu = document.querySelector('.menu');
+
+            hamburger.addEventListener('click', function () {
+	            hamburger.classList.toggle('is-active');
+	            mobile_menu.classList.toggle('is-active');
+            });
+        </script>
+    </header>
+    <div class="banner"></div>
+    <script>
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+    <main>
+        <div class="pages">
+            <div class="titre-page">
+                <h2>HTML/CSS</h2>
+            </div>
+            <div class="page123 sources"> 
+                <p>La chaine Youtube <strong>Online Tutorials</strong> m'a permis de découvrir toutes les possibilités que nous apportait le CSS</p>
+                <a href="https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog" class="plus">Plus</a>
+            </div>
+            <div class="page123 sources">
+                <p>Possibilités que j'ai ensuite pu exploiter en m'aidant du site <strong>Mozilla.org</strong></p>
+                <a href="https://developer.mozilla.org/en-US/" class="plus">Plus</a>
+            </div>
+            <div class="page123 sources">
+                <p>Le site <strong>w3schools.com</strong> m'a également beaucoup éclairé sur certaines notions que je ne connaissais pas</p>
+                <a href="https://www.w3schools.com" class="plus">Plus</a>
+            </div>
+            <div class="titre-page">
+                <h2>Histoire</h2>
+            </div>
+            <div class="page45 sources"> 
+                <p>En ce qui concerne l'Histoire de Python, j'ai trouvé les informations sur <strong>wikipedia.org</strong></p>
+                <a href="https://fr.wikipedia.org/wiki/Python_(langage)" class="plus">Plus</a>
+            </div>
+            <div class="page45 sources">
+                
+                <p>Concernant la frise chronologique, je l'ai trouvée sur un site indépendant nommé <strong>jenningsga.com</strong></p>
+                <a href="https://blog.jenningsga.com/python-a-house-divided/" class="plus"><span>Plus</span></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script>, <a href="https://fenelon-trinite.fr/" style="color: #121622"><strong>Etablissement</strong></a></p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hugo's WebSite</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <a>
+            <p class="titre">Durand Hugo's</p>
+            <p class="sous-titre">WebSite</p>
+        </a>
+        <h2 class="active-page">Histoire</h2>
+        <ul class="menu">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="histoire.html" class="active">Histoire</a></li>
+            <li><a href="favoris.html">Travaux</a></li>
+            <li><a href="sources.html">Sources</a></li>
+            <li><a href="https://www.ecoledirecte.com/login?cameFrom=%2FAccueil">EcoleDirecte</a></li>
+            <li><a href="https://www.w3schools.com">W3Schools</a></li>
+        </ul>
+        <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <script>
+            const hamburger = document.querySelector('.hamburger');
+            const mobile_menu = document.querySelector('.menu');
+
+            hamburger.addEventListener('click', function () {
+	            hamburger.classList.toggle('is-active');
+	            mobile_menu.classList.toggle('is-active');
+            });
+        </script>
+    </header>
+    <div class="banner"></div>
+    <script>
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+    <main>
+        <div class="pages">
+            <div class="titre-page">
+                <h2>Python</h2>
+            </div>
+            <div class="page1 histoire"> 
+                <p>Python est un langage de programmation objet interprété. Son origine est le langage de script du système d’exploitation Amoeba (1990). Il a été développé par Guido Von Rossum au CWI, à l’Université d’Amsterdam et nommé par rapport au Monthy Python’s Flying Circus.
+                Depuis, Python est devenu un langage de programmation généraliste (comp.lang.python est créé en 1994).
+                Il offre un environnement complet de développement comprenant un interpréteur performant et de nombreux modules. Un atout indéniable est sa disponibilité sur la grande majorité des plates-formes courantes (BeOS, Mac OS X, Unix, Windows).
+                Python est un langage open source supporté, développé et utilisé par une large communauté : 300 000 utilisateurs et plus de 500 000 téléchargements par an.
+                </p>
+            </div>
+            <div class="page2 histoire">
+                <img src="../images/frise.png" alt="frise">
+            </div>
+            <div class="page345 histoire">
+                <p>
+                    À la fin des années 1980, le programmeur Guido van Rossum participe au développement du langage de programmation ABC au Centrum voor Wiskunde en Informatica (CWI) d'Amsterdam, aux Pays-Bas. Il travaillait alors dans l’équipe du système d’exploitation Amoeba dont les appels systèmes étaient difficilement interfaçables avec le bourne shell utilisé comme interface utilisateur. Il estime alors qu’un langage de script inspiré d’ABC pourrait être intéressant comme interpréteur de commandes pour Amoeba.
+                    En 1989, profitant d’une semaine de vacances durant les fêtes de Noël, il utilise son ordinateur personnel pour écrire la première version du langage. Fan de la série télévisée des Monty Python, il décide de baptiser ce projet Python. Il s’est principalement inspiré d’ABC, par exemple pour l’indentation comme syntaxe ou les types de haut niveau mais aussi de Modula-3 pour la gestion des exceptions, du langage C et des outils UNIX.
+                    Durant l’année suivante, le langage commence à être adopté par l’équipe du projet Amoeba, Guido poursuivant son développement principalement pendant son temps libre. En février 1991, la première version publique, numérotée 0.9.0, est postée sur le forum Usenet alt.sources. La dernière version sortie au CWI fut Python 1.2.
+    
+                </p>
+            </div> 
+            <div class="page345 histoire">
+                <p>
+                    En 1995, Van Rossum continua son travail sur Python au CNRI (en) à Reston, aux États-Unis, où il sortit plusieurs versions du logiciel. À partir d'août 1995, l'équipe Python travaille au CNRI sur Grail un navigateur web utilisant Tk. Il est l'équivalent pour Python du navigateur HotJava, permettant d'exécuter des applets dans un environnement sécurisé. La première version publique, disponible en novembre, est la 0.2. Il a entraîné le développement de modules pour la bibliothèque standard comme rexec, htmllib ou urllib. La version 0.6 sera la dernière de Grail; elle est publiée en avril 1999. En 1999, le projet Computer Programming for Everybody (CP4E) est lancé avec collaboration entre le CNRI et la DARPA. Il s'agit d'utiliser Python comme langage d'enseignement de la programmation.
+                    Cette initiative conduira à la création de l'environnement de développement IDLE. Cependant, du fait du manque de financement du projet par la DARPA, et du départ de nombreux développeurs Python du CNRI (dont Guido van Rossum), le projet s’éteint en 2000. Python 1.6 fut la dernière version sortie au CNRI.
+                </p>
+            </div>
+            <div class="page345 histoire">
+                <p>
+                    En 2000, l'équipe principale de développement de Python déménagea à BeOpen.com pour former l'équipe PythonLabs de BeOpen.
+                    Python 2.0 fut la seule version sortie à BeOpen.com. Après cette version, Guido Van Rossum et les autres développeurs de PythonLabs rejoignirent Digital Creations (à présent connue sous le nom de Zope Corporation).
+                    Andrew M. Kuchling a publié en décembre 1999 un texte nommé python warts qui synthétise les griefs les plus fréquents exprimés à l'encontre du langage. Ce document aura une influence certaine sur les développements futurs du langage.
+                </p>
+            </div>
+            <div class="page6 histoire">
+                <p>
+                    Python 2.1 fut une version dérivée de Python 1.6.1, ainsi que de Python 2.0. Sa licence fut renommée Python Software Foundation License. Tout code, documentation et spécification ajouté, depuis la sortie de Python 2.1 alpha, est détenu par la Python Software Foundation (PSF), une association sans but lucratif fondée en 2001, modelée d'après l'Apache Software Foundation.
+                    Afin de réparer certains défauts du langage (ex: orientation objet avec deux types de classes), et pour nettoyer la bibliothèque standard de ses éléments obsolètes et redondants, Python a choisi de casser la compatibilité ascendante dans la nouvelle version majeure : Python 3.0, publié en décembre 2008. Cette version a été suivie rapidement par une version 3.1 qui corrige les erreurs de jeunesse de la version 3.0 en la rendant directement obsolète.
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script>, <a href="https://fenelon-trinite.fr/" style="color: #121622"><strong>Etablissement</strong></a></p>
+    </footer>
+</body>
+</html>
